@@ -30,11 +30,11 @@ const handleView = () => {
     <progress class="progress" value="40" max="100"></progress>
     <div class="card bg-base-300 shadow-lg">
       <div class="card-body">
-        <div class="h-50">
-          <h1 v-if="current_side == 'question'" class="flex justify-center">
+        <div class="h-50 flex">
+          <p v-if="current_side == 'question'" class="text-3xl flex justify-center items-center">
             Sample Text of the front side of the card
-          </h1>
-          <p v-else-if="current_side == 'answer'" class="flex justify-center">
+          </p>
+          <p v-else-if="current_side == 'answer'" class="text-lg flex justify-center items-center">
             Answer side of the flash card
           </p>
         </div>
