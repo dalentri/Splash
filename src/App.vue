@@ -2,8 +2,9 @@
 import { ref } from 'vue'
 
 // TODO: Make a it so where the card can flip
-let question_side = ref('')
-let answer_side = ref('')
+const question_side = ref('')
+const answer_side = ref('')
+const view_button_text = ref('Show Answer')
 
 //TODO: Make handling of which side the card is on
 const current_side = ref('question')
@@ -11,8 +12,10 @@ const current_side = ref('question')
 const handleView = () => {
   if (current_side.value == 'question') {
     current_side.value = 'answer'
+    view_button_text.value = 'Hide Answer'
   } else {
     current_side.value = 'question'
+    view_button_text.value = 'Show Answer'
   }
 }
 </script>
@@ -35,9 +38,20 @@ const handleView = () => {
             Answer side of the flash card
           </p>
         </div>
-        <div class="bg-base-600 flex flex-row">
-          <button class="btn font-light">< Previous</button>
-          <div class="flex justify-end w-full"><button class="btn justify-end">Next ></button></div>
+        <div class="bg-base-600 flex flex-row w-full">
+          <div class="w-1/3 flex justify-start">
+            <button class="btn font-light">< Previous</button>
+          </div>
+
+          <div class="w-1/3 flex justify-center">
+            <button class="btn" @click="handleView">
+              {{ view_button_text }}
+            </button>
+          </div>
+
+          <div class="w-1/3 flex justify-end">
+            <button class="btn justify-end">Next ></button>
+          </div>
         </div>
       </div>
     </div>
