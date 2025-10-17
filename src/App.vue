@@ -7,6 +7,14 @@ let answer_side = ref('')
 
 //TODO: Make handling of which side the card is on
 const current_side = ref('question')
+
+const handleView = () => {
+  if (current_side.value == 'question') {
+    current_side.value = 'answer'
+  } else {
+    current_side.value = 'question'
+  }
+}
 </script>
 
 <template>
@@ -19,7 +27,14 @@ const current_side = ref('question')
     <progress class="progress" value="40" max="100"></progress>
     <div class="card bg-base-300 shadow-lg">
       <div class="card-body">
-        <div><h1>Sample Text of the front side of the card</h1></div>
+        <div class="h-50">
+          <h1 v-if="current_side == 'question'" class="flex justify-center">
+            Sample Text of the front side of the card
+          </h1>
+          <p v-else-if="current_side == 'answer'" class="flex justify-center">
+            Answer side of the flash card
+          </p>
+        </div>
         <div class="bg-base-600 flex flex-row">
           <button class="btn font-light">< Previous</button>
           <div class="flex justify-end w-full"><button class="btn justify-end">Next ></button></div>
