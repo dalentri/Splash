@@ -44,7 +44,7 @@ const handleView = () => {
         </div>
       </div>
 
-      <progress class="progress w-full" value="40" max="100"></progress>
+      <progress class="progress w-full" :value="current_index + 1" :max="cards.length"></progress>
 
       <div class="card bg-base-300 shadow-lg w-full">
         <div class="card-body">
