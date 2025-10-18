@@ -1,0 +1,22 @@
+[
+  {
+    "index": 1,
+    "question": "Which data structure uses the Last In First Out (LIFO) order?",
+    "answer": "A Stack"
+  },
+  {
+    "index": 2,
+    "question": "In a binary tree, each node can have how many children?",
+    "answer": "Two"
+  },
+  {
+    "index": 3,
+    "question": "Whats the time complexity of accessing an element in an array?",
+    "answer": "O(1)"
+  },
+  {
+    "index": 4,
+    "question": "Whats the primary purpose of a queue?",
+    "answer": "To manage tasks in First in First out order"
+  }
+]
