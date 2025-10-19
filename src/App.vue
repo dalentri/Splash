@@ -51,7 +51,7 @@ const handleView = () => {
           <div v-if="cards.length">
             <div class="h-50 flex justify-center items-center">
               <p v-if="current_side == 'question'" class="text-3xl text-center w-full">
-                {{ sample_cards[current_index].question }}
+                {{ cards[current_index].question }}
               </p>
               <p v-else-if="current_side == 'answer'" class="text-3xl text-center w-full">
                 {{ cards[current_index].answer }}
@@ -61,7 +61,7 @@ const handleView = () => {
 
           <div class="bg-base-600 flex flex-row w-full">
             <div class="w-1/3 flex justify-start">
-              <button class="btn font-light" @click="prevCard">< Previous</button>
+              <button class="btn font-light" @click="prevCard">Previous</button>
             </div>
             <div class="w-1/3 flex justify-center">
               <button class="btn" @click="handleView">
@@ -69,7 +69,7 @@ const handleView = () => {
               </button>
             </div>
             <div class="w-1/3 flex justify-end">
-              <button class="btn" @click="nextCard">Next ></button>
+              <button class="btn" @click="nextCard">Next</button>
             </div>
           </div>
         </div>
