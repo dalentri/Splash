@@ -53,7 +53,7 @@ const handleView = () => {
               <p v-if="current_side == 'question'" class="text-3xl text-center w-full">
                 {{ sample_cards[current_index].question }}
               </p>
-              <p v-else-if="current_side == 'answer'" class="text-lg text-center w-full">
+              <p v-else-if="current_side == 'answer'" class="text-3xl text-center w-full">
                 {{ cards[current_index].answer }}
               </p>
             </div>
