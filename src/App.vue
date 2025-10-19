@@ -2,8 +2,6 @@
 import { ref } from 'vue'
 import sample_cards from './data/samplecards.json'
 
-const question_side = ref('')
-const answer_side = ref('')
 const view_button_text = ref('Show Answer')
 const current_side = ref('question')
 
