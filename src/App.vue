@@ -49,10 +49,10 @@ const handleView = () => {
           <div v-if="cards.length">
             <div class="h-50 flex justify-center items-center">
               <p v-if="current_side == 'question'" class="text-3xl text-center w-full">
-                {{ cards[current_index].question }}
+                {{ cards[current_index]?.question }}
               </p>
               <p v-else-if="current_side == 'answer'" class="text-3xl text-center w-full">
-                {{ cards[current_index].answer }}
+                {{ cards[current_index]?.answer }}
               </p>
             </div>
           </div>
